@@ -52040,7 +52040,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Dialouge",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -52202,6 +52202,78 @@
                         ]
                     },
                     "id": "47c08868-d13f-42b3-bd16-58269473f6eb"
+                },
+                {
+                    "command": "EVENT_GROUP",
+                    "args": {
+                        "__label": "Menu Keys"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_INPUT_SCRIPT",
+                                "args": {
+                                    "input": [
+                                        "left"
+                                    ],
+                                    "override": true,
+                                    "__scriptTabs": "press"
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_IF_FALSE",
+                                            "args": {
+                                                "variable": "9",
+                                                "__collapseElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_DEC_VALUE",
+                                                        "args": {
+                                                            "variable": "7"
+                                                        },
+                                                        "id": "13771afc-ba99-4a23-b33a-6ebf93dae305"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "7",
+                                                            "operator": "==",
+                                                            "comparator": "0",
+                                                            "__collapseElse": true
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "7",
+                                                                        "value": {
+                                                                            "type": "number",
+                                                                            "value": 1
+                                                                        }
+                                                                    },
+                                                                    "id": "bfa37125-00a2-4ab9-a20a-5ce397651821"
+                                                                }
+                                                            ],
+                                                            "false": []
+                                                        },
+                                                        "id": "00549de1-9c0d-433a-8e69-494141d46926"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "4535d1ab-c024-4f88-bbdc-3e6443e0f78c"
+                                        }
+                                    ]
+                                },
+                                "id": "6eb19bcf-9d92-41fe-9040-81ae663afaf8"
+                            }
+                        ]
+                    },
+                    "id": "d9ecc7db-4166-4ddf-b625-0f0f9d5dec4d"
                 }
             ],
             "playerHit1Script": [],
@@ -59485,11 +59557,147 @@
                                 "args": {
                                     "variable": "0",
                                     "operator": "==",
-                                    "comparator": "0",
+                                    "comparator": 1,
                                     "__collapseElse": true
                                 },
                                 "children": {
-                                    "true": [],
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "temp"
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "e4acc42e-cb33-4d89-b0e0-5582427c7b9f"
+                                        },
+                                        {
+                                            "command": "PT_EVENT_ADVANCED_MENU",
+                                            "args": {
+                                                "variable": "0",
+                                                "__scriptTabs": "items",
+                                                "width": 20,
+                                                "height": 18,
+                                                "from": "right",
+                                                "items": 11,
+                                                "option_1_text": "",
+                                                "option1_x": 0,
+                                                "option1_y": 0,
+                                                "option1_l": 0,
+                                                "option1_r": 0,
+                                                "option1_u": 0,
+                                                "option1_d": 0,
+                                                "option_2_text": "",
+                                                "option2_x": 0,
+                                                "option2_y": 0,
+                                                "option2_l": 0,
+                                                "option2_r": 0,
+                                                "option2_u": 0,
+                                                "option2_d": 0,
+                                                "option_3_text": "",
+                                                "option3_x": 0,
+                                                "option3_y": 0,
+                                                "option3_l": 0,
+                                                "option3_r": 0,
+                                                "option3_u": 0,
+                                                "option3_d": 0,
+                                                "option_4_text": "",
+                                                "option4_x": 0,
+                                                "option4_y": 0,
+                                                "option4_l": 0,
+                                                "option4_r": 0,
+                                                "option4_u": 0,
+                                                "option4_d": 0,
+                                                "option_5_text": "",
+                                                "option5_x": 0,
+                                                "option5_y": 0,
+                                                "option5_l": 0,
+                                                "option5_r": 0,
+                                                "option5_u": 0,
+                                                "option5_d": 0,
+                                                "option_6_text": "",
+                                                "option6_x": 0,
+                                                "option6_y": 0,
+                                                "option6_l": 0,
+                                                "option6_r": 0,
+                                                "option6_u": 0,
+                                                "option6_d": 0,
+                                                "option_7_text": "",
+                                                "option7_x": 0,
+                                                "option7_y": 0,
+                                                "option7_l": 0,
+                                                "option7_r": 0,
+                                                "option7_u": 0,
+                                                "option7_d": 0,
+                                                "option_8_text": "",
+                                                "option8_x": 0,
+                                                "option8_y": 0,
+                                                "option8_l": 0,
+                                                "option8_r": 0,
+                                                "option8_u": 0,
+                                                "option8_d": 0,
+                                                "option_9_text": "",
+                                                "option9_x": 0,
+                                                "option9_y": 0,
+                                                "option9_l": 0,
+                                                "option9_r": 0,
+                                                "option9_u": 0,
+                                                "option9_d": 0,
+                                                "option_10_text": "",
+                                                "option10_x": 0,
+                                                "option10_y": 0,
+                                                "option10_l": 0,
+                                                "option10_r": 0,
+                                                "option10_u": 0,
+                                                "option10_d": 0,
+                                                "option_11_text": "",
+                                                "option11_x": 0,
+                                                "option11_y": 0,
+                                                "option11_l": 0,
+                                                "option11_r": 0,
+                                                "option11_u": 0,
+                                                "option11_d": 0,
+                                                "option_12_text": "",
+                                                "option12_x": 0,
+                                                "option12_y": 0,
+                                                "option12_l": 0,
+                                                "option12_r": 0,
+                                                "option12_u": 0,
+                                                "option12_d": 0,
+                                                "option_13_text": "",
+                                                "option13_x": 0,
+                                                "option13_y": 0,
+                                                "option13_l": 0,
+                                                "option13_r": 0,
+                                                "option13_u": 0,
+                                                "option13_d": 0,
+                                                "option_14_text": "",
+                                                "option14_x": 0,
+                                                "option14_y": 0,
+                                                "option14_l": 0,
+                                                "option14_r": 0,
+                                                "option14_u": 0,
+                                                "option14_d": 0,
+                                                "option_15_text": "",
+                                                "option15_x": 0,
+                                                "option15_y": 0,
+                                                "option15_l": 0,
+                                                "option15_r": 0,
+                                                "option15_u": 0,
+                                                "option15_d": 0,
+                                                "option_16_text": "",
+                                                "option16_x": 0,
+                                                "option16_y": 0,
+                                                "option16_l": 0,
+                                                "option16_r": 0,
+                                                "option16_u": 0,
+                                                "option16_d": 0,
+                                                "__comment": true
+                                            },
+                                            "id": "10476aa8-2076-4b44-a2c4-6621b4f941e0"
+                                        }
+                                    ],
                                     "false": []
                                 },
                                 "id": "83f596c4-fa25-414d-883c-c1af6e8dae29"
@@ -59609,9 +59817,21 @@
             "id": "f4702849-bbdc-421e-a719-7aa029d8df24",
             "name": "Menu Keys",
             "description": "Attaches scripts to buttons for menuing for battles\n\nMenuMain:\n1: Fight\n2: Act\n3: Item\n4: Mercy\n\nMenuSub",
-            "variables": {},
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "InSubMenu"
+                }
+            },
             "actors": {},
             "script": [
+                {
+                    "command": "EVENT_SET_FALSE",
+                    "args": {
+                        "variable": "0"
+                    },
+                    "id": "2c0d0668-b3c6-41f3-a937-446fd4001e76"
+                },
                 {
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -59841,10 +60061,6 @@
             "name": "Round No."
         },
         {
-            "id": "9fa0dedf-e220-4b04-bf34-4155ac3d4d88__L0",
-            "name": "Counter"
-        },
-        {
             "id": "7",
             "name": "MenuMain"
         },
@@ -59855,6 +60071,10 @@
         {
             "id": "9",
             "name": "InSubMenu"
+        },
+        {
+            "id": "9fa0dedf-e220-4b04-bf34-4155ac3d4d88__L0",
+            "name": "Counter"
         }
     ],
     "engineFieldValues": [
@@ -59872,8 +60092,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "all",
-        "worldScrollX": 417,
-        "worldScrollY": 1086,
+        "worldScrollX": 0,
+        "worldScrollY": 164,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -59902,9 +60122,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            202,
-            205,
-            549
+            293,
+            297,
+            797
         ],
         "showNavigator": true,
         "defaultFontId": "cf952bf5-8e3f-432a-b9bf-e91d27ed51a2",
