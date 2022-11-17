@@ -52206,7 +52206,8 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Menu Keys"
+                        "__label": "Menu Keys",
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -52225,7 +52226,7 @@
                                             "command": "EVENT_IF_FALSE",
                                             "args": {
                                                 "variable": "9",
-                                                "__collapseElse": true
+                                                "__collapseElse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -52263,7 +52264,41 @@
                                                         "id": "00549de1-9c0d-433a-8e69-494141d46926"
                                                     }
                                                 ],
-                                                "false": []
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_DEC_VALUE",
+                                                        "args": {
+                                                            "variable": "8"
+                                                        },
+                                                        "id": "3321a832-0501-42f4-89c5-1b75ff136fc7"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE",
+                                                        "args": {
+                                                            "variable": "8",
+                                                            "operator": "==",
+                                                            "comparator": "0",
+                                                            "__collapseElse": true
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_SET_VALUE",
+                                                                    "args": {
+                                                                        "variable": "8",
+                                                                        "value": {
+                                                                            "type": "number",
+                                                                            "value": 1
+                                                                        }
+                                                                    },
+                                                                    "id": "fb9db731-e61d-45e6-9f9c-1db8474e923c"
+                                                                }
+                                                            ],
+                                                            "false": []
+                                                        },
+                                                        "id": "c93a8b1b-ab8d-46c4-b1ce-1ccd47737422"
+                                                    }
+                                                ]
                                             },
                                             "id": "4535d1ab-c024-4f88-bbdc-3e6443e0f78c"
                                         }
@@ -60093,7 +60128,7 @@
         "showCollisions": true,
         "showConnections": "all",
         "worldScrollX": 0,
-        "worldScrollY": 164,
+        "worldScrollY": 71,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
