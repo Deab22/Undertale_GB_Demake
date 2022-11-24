@@ -47689,6 +47689,21 @@
                     "id": "f7d4bab0-b9ab-4bc8-93e7-a9bce9075d8b"
                 },
                 {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "44159470-9893-4474-9199-8690dd574f1d"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a",
+                        "__collapse": false
+                    },
+                    "id": "3556fbbd-4fde-4753-8442-2aca23a0c491"
+                },
+                {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
                         "color": "black",
@@ -48106,6 +48121,13 @@
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "ac0dd916-6f9c-4252-ad56-87cfa2052527"
+                },
                 {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
@@ -48525,6 +48547,13 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "6c342966-245f-48bb-a192-cc7816e06574"
+                },
+                {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
                         "color": "black",
@@ -48942,6 +48971,13 @@
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "93c71070-4874-45b6-85eb-69eeaebc74a9"
+                },
                 {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
@@ -49361,6 +49397,13 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "8ede22f6-d38a-432a-8c58-7a1bb9b419b0"
+                },
+                {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
                         "color": "black",
@@ -49778,6 +49821,13 @@
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "a265e64c-cdee-4a47-9e0b-9e8ad5ea2ff4"
+                },
                 {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
@@ -50197,6 +50247,13 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a"
+                    },
+                    "id": "91e0bf6d-4f29-42bf-b97b-4bd30007b2d1"
+                },
+                {
                     "command": "EVENT_OVERLAY_SHOW",
                     "args": {
                         "color": "black",
@@ -50236,7 +50293,8 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "symbol": "scene_intro_07"
+            "symbol": "scene_intro_07",
+            "autoFadeEventCollapse": false
         },
         {
             "name": "Battle (test)",
@@ -60021,6 +60079,62 @@
                 }
             ],
             "symbol": "script_menu_keys"
+        },
+        {
+            "id": "d870498c-7a3e-470a-85c3-8a7bf4d6e28a",
+            "name": "Skip Intro Cutscene",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_7",
+            "script": [
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "b",
+                            "start",
+                            "select",
+                            "a"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_MUSIC_STOP",
+                                "args": {},
+                                "id": "22c885d8-c53b-4f65-9810-ae06434b5e02"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "f3f186e3-9f9a-4f8e-9867-390c7247ee78",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "down",
+                                    "fadeSpeed": 2
+                                },
+                                "id": "eb334b5f-cbe5-48f3-b248-4c4c3fdb5233"
+                            },
+                            {
+                                "command": "EVENT_REMOVE_INPUT_SCRIPT",
+                                "args": {
+                                    "input": [
+                                        "b",
+                                        "a",
+                                        "start",
+                                        "select"
+                                    ]
+                                },
+                                "id": "5a11d11b-9c25-4260-bcbe-362581d4e4a5"
+                            }
+                        ]
+                    },
+                    "id": "cf8c5de1-033d-4dc5-a565-ba99c339a0f8"
+                }
+            ]
         }
     ],
     "music": [
@@ -60295,16 +60409,16 @@
         }
     ],
     "settings": {
-        "startSceneId": "93481461-209a-497c-8304-a54799217280",
-        "startX": 14,
-        "startY": 9,
+        "startSceneId": "b4887780-0a45-45e6-b7af-d171ae0018ff",
+        "startX": 0,
+        "startY": 0,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": "all",
         "worldScrollX": 0,
-        "worldScrollY": 71,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
